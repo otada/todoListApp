@@ -11,24 +11,27 @@
       var todos = ['a', 'b', 'c', 'd', 'e'];
      
       //a way to dispaly todo in browser
-      console.log(todos);
+      function displayTodos(){
+        console.log('My todos:', todos);
+      }
       
       //a function to add todo to todos
-      function add(todo) { 
+      function addTodo(todo) { 
         todos.push(todo);
-        console.log(todos);
+        displayTodos();
       }
       
       //a function to edit item in todos
-      function edit(position, newValue){
-        todos[position] = todo;
-        console.log(todos);
+      function changeTodo(position, newValue){
+        todos[position-1] = newValue;
+        displayTodos();
       }
 
       //a function to remove item form todo list
-      function remove(position){
-        todos.splice(position, 1);
-        console.log(todos);
+      function deleteTodo(position){
+        todos.splice(position-1, 1);
+        displayTodos();
+        
       }
 
     </script>
