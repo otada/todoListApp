@@ -8,15 +8,29 @@
   <body>
     <script>
       //a way to store todos
-      var todos = ['Item 1', 'Item 2', 'Item 3'];
+      var todos = ['a', 'b', 'c', 'd', 'e'];
+     
       //a way to dispaly todo in browser
       console.log(todos);
-      //a way to add item to todos
-      todos.push('Item 4');
-      //a way to edit item in todos
-      todos[0] = 'Item 1 updated';
-      //a way to remove item form todo list
-      todos.splice(0, 1);
+      
+      //a function to add todo to todos
+      function add(todo) { 
+        todos.push(todo);
+        console.log(todos);
+      }
+      
+      //a function to edit item in todos
+      function edit(position, newValue){
+        todos[position] = todo;
+        console.log(todos);
+      }
+
+      //a function to remove item form todo list
+      function remove(position){
+        todos.splice(position, 1);
+        console.log(todos);
+      }
+
     </script>
   </body>
 </html>
